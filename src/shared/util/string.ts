@@ -9,12 +9,14 @@ export const add = (numbers: string): number => {
   if (numbers === defaultDelimeter) return 0;
 
   try {
-    // need to check if the string starts with `//` and has a delimeter
-    if (numbers.startsWith("//")) {
-      // get the delimeter
-      delimeter = numbers[2];
-      // remove the delimeter from the string
-      numbers = numbers.slice(4);
+    // need to check if the string starts with `//[delimeter]` and has a delimeter
+    if (numbers.startsWith("//[")) {
+      // find the end of the delimiter
+      const delimiterEndIndex = numbers.indexOf("]\n");
+      // get the delimiter
+      delimeter = numbers.substring(3, delimiterEndIndex);
+      // remove the delimiter from the string
+      numbers = numbers.slice(delimiterEndIndex + 2);
     }
 
     //handle just the custom delimeter

@@ -30,7 +30,7 @@ describe("String Adder", () => {
   });
 
   it("Handle String Separated By Delimeter With Different Delimeter", () => {
-    const numbers = "//;\n1;2";
+    const numbers = "//[;]\n1;2";
     const result = add(numbers);
 
     expect(result).toBe(3);
@@ -44,7 +44,7 @@ describe("String Adder", () => {
   });
 
   it("Handle Only Custom Delimeter", () => {
-    const numbers = "//;\n";
+    const numbers = "//[;]\n";
     const result = add(numbers);
 
     expect(result).toBe(0);
@@ -98,7 +98,7 @@ describe("String Adder", () => {
   });
 
   it("Handle Multiple Delimteres With Custom Delimeter", () => {
-    const numbers = "//;\n1;2,3";
+    const numbers = "//[;]\n1;2,3";
     const result = add(numbers);
 
     expect(result).toBe(3);
