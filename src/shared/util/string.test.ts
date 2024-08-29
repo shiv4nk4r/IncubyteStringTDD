@@ -36,6 +36,13 @@ describe("String Adder", () => {
     expect(result).toBe(3);
   });
 
+  it("Handle String Separated By Delimeter With Long Delimeter", () => {
+    const numbers = "//[;abc]\n1;abc2;abc3";
+    const result = add(numbers);
+
+    expect(result).toBe(6);
+  });
+
   it("Handle Only Delimeter", () => {
     const numbers = ",";
     const result = add(numbers);
