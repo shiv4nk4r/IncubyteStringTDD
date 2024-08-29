@@ -27,7 +27,7 @@ function App() {
       <textarea
         onChange={(e) => setInputString(e.target.value)}
         placeholder="Type here..."
-        className=" text-right flex-1 w-full h-auto resize-none bg-transparent focus-visible:outline-none text-5xl font-medium tracking-widest leading-relaxed text-gray-400"
+        className=" text-right flex-1 w-full h-auto resize-none bg-transparent focus-visible:outline-none text-5xl font-light tracking-widest leading-relaxed text-gray-400"
       />
 
       <div className="flex-1 py-6 relative flex flex-col justify-end">
