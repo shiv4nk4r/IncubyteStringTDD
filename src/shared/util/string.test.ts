@@ -50,6 +50,13 @@ describe("String Adder", () => {
     expect(result).toBe(0);
   });
 
+  it("Handle Digits Greate Than 1000", () => {
+    const numbers = "1001,1,2";
+    const result = add(numbers);
+
+    expect(result).toBe(3);
+  });
+
   it("Handle Only Custom Delimeter", () => {
     const numbers = "//[;]\n";
     const result = add(numbers);

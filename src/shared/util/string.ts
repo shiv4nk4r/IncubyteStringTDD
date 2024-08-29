@@ -82,6 +82,10 @@ export const fetchNumbers = (numbers: string): number[] => {
         return 0;
       }
 
+      if (parseInt(a) > 1000) {
+        return 0;
+      }
+
       return parseInt(a);
     }, 0);
 
