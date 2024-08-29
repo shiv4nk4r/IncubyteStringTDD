@@ -52,7 +52,7 @@ function App() {
             )
           )}
         </div>
-        <div className=" right-0 h-1 bg-slate-300"></div>
+        <div className=" right-0 h-0.5 bg-slate-300"></div>
         <div className="w-full text-right text-7xl font-light">
           {errors ? (
             <div className=" text-3xl text-red-400">{errors}</div>
