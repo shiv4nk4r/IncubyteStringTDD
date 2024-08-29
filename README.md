@@ -1,50 +1,16 @@
-# React + TypeScript + Vite
+# Project Name: stringTDD
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Author: Shivankar Sharma
 
-Currently, two official plugins are available:
+## Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Incubyte Problem Statement
 
-## Expanding the ESLint configuration
+## Files Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. `/src/shared/util/string.ts`: This file contains utility functions for manipulating strings, such as reversing a string, counting characters, etc.
+2. `/src/shared/util/string.tes.ts`: This file contains unit tests for the functions defined in `stringUtils.js`. It uses a testing framework Jest to run the tests and verify the expected behavior.
 
-- Configure the top-level `parserOptions` property like this:
+Feel free to explore the code and run the tests to see TDD in action!
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Use `npm run test` to run the test cases.
